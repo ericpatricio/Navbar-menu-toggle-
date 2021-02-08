@@ -1,0 +1,132 @@
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
+
+
+:root {
+  --primary-color: #FA8072;
+  --secondary-color: #2C3E50;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Istok Web', sans-serif;
+}
+
+nav {
+  background: #F4F6F7;
+  border-bottom: 1px solid rgba(250, 128, 114, 0.2);  
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+  transition: transform all 3s linear;
+  outline: none;
+}
+
+.nav-toggle:hover {
+  transform: rotate(90deg);
+}
+
+/* Default hidden links */
+.links {
+  height: 0;
+  overflow: hidden; 
+  transition: links 3s linear; 
+}
+
+/* Toggle class */
+.show-links {
+  height: 10rem;
+}
+
+.links a {
+  color: var(--secondary-color);
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 0.5;
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.links a:hover {
+  background-color: var(--primary-color);
+}
+
+.social-icons {
+  display: none;
+}
+
+/* Responsive */
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;    
+  }
+
+  .nav-header {
+    padding: 0;    
+  }
+
+  .nav-toggle {
+    display: none;    
+  }
+
+  .links {
+    display: flex;
+    height: auto;
+    list-style: none;    
+  }
+
+  .links a {
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 4px;
+    text-decoration: none;    
+  }
+
+  .links a:hover {
+    background: var(--primary-color);    
+  }
+
+  .social-icons {
+    display: flex;  
+    list-style: none;  
+  }
+
+  .social-icons a {
+    margin: 0 0.5rem;
+    color: var(--secondary-color);
+    font-size: 1.5rem;    
+  }
+
+  .social-icons a:hover {
+    color: var(--primary-color);
+  }
+
+}
